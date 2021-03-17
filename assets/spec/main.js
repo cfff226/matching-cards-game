@@ -281,7 +281,7 @@ function createBoard() {
     }
 
     function noMatch() {
-        setTimeout(flipBack, 7);
+        setTimeout(flipBack, 400);
     }
 
     function flipBack() {
