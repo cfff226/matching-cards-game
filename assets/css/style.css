@@ -38,17 +38,17 @@ html {
 }
 
 .modal {
-  margin-left: 0; 
-  margin-top: 0; 
-  box-shadow: 0.7rem 0.7rem 0.7rem rgba(68, 68, 68, 0.6);
+    margin-left: 0; 
+    margin-top: 0; 
+    box-shadow: 0.7rem 0.7rem 0.7rem rgba(68, 68, 68, 0.6);
 }
 
 .modal-content {
-  background-color:  #B084CC;
-  padding: 20px; 
-  margin: auto; 
-  width: 75%;  
-   box-shadow: 0.7rem 0.7rem 0.7rem rgba(68, 68, 68, 0.6);
+    background-color:  #B084CC;
+    padding: 20px; 
+    margin: auto; 
+    width: 75%;  
+    box-shadow: 0.7rem 0.7rem 0.7rem rgba(68, 68, 68, 0.6);
 }
 
 .modal-title {
@@ -66,15 +66,23 @@ html {
 
  .btn-primary:hover {
     background-color:  #B084CC;
-     border: solid 0.1rem  rgb(255, 255, 23);
+    border: solid 0.1rem  rgb(255, 255, 23);
  }
 
  .btn-primary:active {
     background-color:  #B084CC;
-     border: solid 0.1rem  rgb(255, 255, 23);
+    border: solid 0.1rem  rgb(255, 255, 23);
  }
 
  .btn-primary:focus {
     background-color:  #B084CC;
-     border: solid 0.1rem  rgb(255, 255, 23);
+    border: solid 0.1rem  rgb(255, 255, 23);
  }
+
+.game-information {
+    justify-content: center;
+    text-align: center;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    display: inline-block;
+}
