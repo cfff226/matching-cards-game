@@ -36,83 +36,83 @@ function createBoard() {
     let cardList = [
         {
             name: "bear",
-            img: "images/bear.png"
+            img: "assets/images/bear.png"
         },
         {
             name: "bull",
-            img: "images/bull.png"
+            img: "assets/images/bull.png"
         },
         {
             name: "dog",
-            img: "images/dog.png"
+            img: "assets/images/dog.png"
         },
         {
             name: "duck",
-            img: "images/duck.png"
+            img: "assets/images/duck.png"
         },
         {
             name: "hare",
-            img: "images/hare.png"
+            img: "assets/images/hare.png"
         },
         {
             name: "hedgehog",
-            img: "images/hedgehog.png"
+            img: "assets/images/hedgehog.png"
         },
         {
             name: "hippo",
-            img: "images/hippo.png"
+            img: "assets/images/hippo.png"
         },
         {
             name: "koala",
-            img: "images/koala.png"
+            img: "assets/images/koala.png"
         },
         {
             name: "leopard",
-            img: "images/leopard.png"
+            img: "assets/images/leopard.png"
         },
         {
             name: "lion",
-            img: "images/lion.png"
+            img: "assets/images/lion.png"
         },
         {
             name: "monkey",
-            img: "images/monkey.png"
+            img: "assets/images/monkey.png"
         },
         {
             name: "panda",
-            img: "images/panda.png"
+            img: "assets/images/panda.png"
         },
         {
             name: "penguin",
-            img: "images/penguin.png"
+            img: "assets/images/penguin.png"
         },
         {
             name: "pig",
-            img: "images/pig.png"
+            img: "assets/images/pig.png"
         },
         {
             name: "rabbit",
-            img: "images/rabbit.png"
+            img: "assets/images/rabbit.png"
         },
         {
             name: "racoon",
-            img: "images/racoon.png"
+            img: "assets/images/racoon.png"
         },
         {
             name: "sheep",
-            img: "images/sheep.png"
+            img: "assets/images/sheep.png"
         },
         {
             name: "badger",
-            img: "images/badger.png"
+            img: "assets/images/badger.png"
         },
         {
             name: "snake",
-            img: "images/snake.png"
+            img: "assets/images/snake.png"
         },
         {
             name: "whale",
-            img: "images/whale.png"
+            img: "assets/images/whale.png"
         }
     ];
     console.log("image list created");
@@ -166,7 +166,7 @@ function createBoard() {
     function easy() {
         for (i = 0; i < easyLevelArrayPairs.length; i++) {
             var gameCard = document.createElement('img');
-            gameCard.setAttribute('src', "images/background.png");
+            gameCard.setAttribute('src', "assets/images/background.png");
             gameCard.setAttribute('data-id', easyLevelArrayPairs[i].img);
             gameCard.setAttribute('id', `cardImage${i}`);
             gameCard.addEventListener('click', flipCard);
@@ -200,22 +200,20 @@ function createBoard() {
             alert("Match!");
             cardsWon.push(cardsChosen)
             console.log(cardsWon)
-
-
-
-        }
-
-        // flip the cards //
-
-        function flipCard() {
-            var gameCardData = this.getAttribute("data-id");
-            var gameCardId = this.getAttribute("id");
-            cardsChosen.push(gameCardData);
-            cardsChosenId.push(gameCardId);
-            this.setAttribute("src", [gameCardData]);
-            this.setAttribute("id", [gameCardId]);
-            if (cardsChosen.length === 2) {
-                setTimeout(checkForMatch, 300);
-            }
         }
     }
+
+    // flip the cards //
+
+    function flipCard() {
+        var gameCardData = this.getAttribute("data-id");
+        var gameCardId = this.getAttribute("id");
+        cardsChosen.push(gameCardData);
+        cardsChosenId.push(gameCardId);
+        this.setAttribute("src", [gameCardData]);
+        this.setAttribute("id", [gameCardId]);
+        if (cardsChosen.length === 2) {
+            setTimeout(checkForMatch, 300);
+        }
+    }
+}
