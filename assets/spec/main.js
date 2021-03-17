@@ -212,8 +212,12 @@ function createBoard() {
 
     var hardLevelArrayPairs = hardModeCardList.concat(hardModeCardList);
 
+    shuffle(hardLevelArrayPairs);
+
+    // event listener for hard button //
 
 
+    hardButton.addEventListener('click', hard);
 
 
     function checkForMatch() {
