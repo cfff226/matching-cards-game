@@ -116,6 +116,13 @@ function createBoard() {
     ];
    console.log("image list created");
 
+
+  // shuffle function //
+
+    function shuffle(array) {
+        array.sort(() => Math.random() - 0.5);
+    }
+
   // modal //
 
     $(window).on('load', function () {
