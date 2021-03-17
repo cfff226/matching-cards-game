@@ -14,30 +14,47 @@
     <title>Matching Card Game</title>
 
 </head>
+
 <body>
-<section>
-<div class="modal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">CHOOSE YOUR LEVEL</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-      <div class="modal-body">
-        <p>MATCH THE ANIMALS IN PAIRS
-            <br>GOOD LUCK!</p></div>
-            <div class="modal-footer">
-        <button type="button" id="easyButton" onclick="document.getElementById('normalButton').disabled=true;document.getElementById('hardButton').disabled=true;document.getElementById('easyButton').disabled=false; this.disabled = true;" class="btn btn-primary">EASY</button>
-        <button type="button" id="normalButton"  onclick="document.getElementById('easyButton').disabled=true;document.getElementById('hardButton').disabled=true;document.getElementById('normalButton').disabled=false; this.disabled = true;" class="btn btn-primary">NORMAL</button>
-        <button type="button" id="hardButton" onclick="document.getElementById('normalButton').disabled=true;document.getElementById('easyButton').disabled=true;document.getElementById('hardButton').disabled=false; this.disabled = true;" class="btn btn-primary">HARD</button>
-      </div>
-    </div>
-  </div>
-</div>
+    <section>
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">CHOOSE YOUR LEVEL</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>MATCH THE ANIMALS IN PAIRS
+                            <br>GOOD LUCK!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="easyButton"
+                            onclick="document.getElementById('normalButton').disabled=true;document.getElementById('hardButton').disabled=true;document.getElementById('easyButton').disabled=false; this.disabled = true;"
+                            class="btn btn-primary">EASY</button>
+                        <button type="button" id="normalButton"
+                            onclick="document.getElementById('easyButton').disabled=true;document.getElementById('hardButton').disabled=true;document.getElementById('normalButton').disabled=false; this.disabled = true;"
+                            class="btn btn-primary">NORMAL</button>
+                        <button type="button" id="hardButton"
+                            onclick="document.getElementById('normalButton').disabled=true;document.getElementById('easyButton').disabled=true;document.getElementById('hardButton').disabled=false; this.disabled = true;"
+                            class="btn btn-primary">HARD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container-fluid">
+            <h1>
+            </h1>
+            <div class="game-info">
 
 
-</section>
+            </div>
+        </div>
+
+
+    </section>
 </body>
+
 </html>
