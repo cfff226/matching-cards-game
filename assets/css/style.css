@@ -86,3 +86,16 @@ html {
     padding-left: 5rem;
     display: inline-block;
 }
+
+h1 {
+    justify-items: center;
+    font-size: 4rem;
+    padding-top: 2rem;
+    margin-left: 2.5rem;
+    margin-right: 4rem;
+    letter-spacing: 0.25rem;
+    flex: nowrap;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgba(68, 68, 68, 0.6);
+    color:  rgb(255, 255, 23);
+    text-align: center;
+}
