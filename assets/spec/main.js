@@ -9,6 +9,8 @@ var numberOfCards;
 var movesCount;
 var gameCard;
 var gameCardId;
+var easyModeCardList;
+var easyLevelArrayPairs;
 var displayButtons;
 
 // variables for the game information //
@@ -136,5 +138,20 @@ function createBoard() {
         $('#normalButton').attr("disabled", false);
         $('#hardButton').attr("disabled", false);
     }
+
+// easy level board //
+
+var easyModeCardList = cardList.slice(0, 5);
+
+var easyLevelArrayPairs = easyModeCardList.concat(easyModeCardList);
+
+
+
+
+
+
+
+
+
 
 }
