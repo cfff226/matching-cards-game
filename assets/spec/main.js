@@ -116,12 +116,6 @@ function createBoard() {
     ];
     console.log("image list created");
 
-    var grid = document.querySelector('.grid');
-    console.log("Selector Elements '.grid' found: " + grid.toString());
-
-
-
-
 
     // shuffle function //
 
@@ -165,9 +159,28 @@ function createBoard() {
 
     easyButton.addEventListener('click', easy);
 
+    function easy() {
+        for (i = 0; i < easyLevelArrayPairs.length; i++) {
+            var gameCard = document.createElement('img');
+            gameCard.setAttribute('src', "images/background.png");
+            gameCard.setAttribute('data-id', easyLevelArrayPairs[i].img);
+            gameCard.setAttribute('id', `cardImage${i}`);
+            gameCard.addEventListener('click', flipCard);
+            grid.appendChild(gameCard);
+            console.log("Card id " + gameCard.getAttribute('data-id') + " added to board");
+        }
+    }
 
+    // flip the cards //
 
-
-
-
+    function flipCard() {
+        var gameCardData = this.getAttribute("data-id");
+        var gameCardId = this.getAttribute("id");
+        cardsChosen.push(gameCardData);
+        cardsChosenId.push(gameCardId);
+        this.setAttribute("src", [gameCardData]);
+        this.setAttribute("id", [gameCardId]);
+        if (cardsChosen.length === 2) {
+            setTimeout(checkForMatch, 300);
+        }}
 }
