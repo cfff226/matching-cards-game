@@ -116,3 +116,7 @@ p {
     box-shadow: 0.7rem 0.7rem 0.7rem rgba(68, 68, 68, 0.6);
     border: solid white 0.24rem;
 }
+
+.hidden {
+    display: none;
+}
