@@ -57,3 +57,12 @@ html {
     text-align: center;
     font-size: 20px;
 }
+
+.btn .btn:hover .btn:active .btn:focus {
+    background-color:  #B084CC;
+    color:  rgb(255, 255, 23);
+    display: inline;
+    font-style: bold;
+    letter-spacing: 0.1rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgba(68, 68, 68, 0.6);
+}
