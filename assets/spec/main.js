@@ -112,9 +112,13 @@ function createBoard() {
             img: "images/whale.png"
         }
     ];
+   console.log("image list created");
 
+  // modal //
 
-
+    $(window).on('load', function () {
+        $('.modal').modal('show');
+    });
 
 
 }
