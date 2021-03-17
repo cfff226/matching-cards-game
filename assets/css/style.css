@@ -50,3 +50,10 @@ html {
   width: 75%;  
    box-shadow: 0.7rem 0.7rem 0.7rem rgba(68, 68, 68, 0.6);
 }
+
+.modal-title {
+    color: #ACFCD9;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
