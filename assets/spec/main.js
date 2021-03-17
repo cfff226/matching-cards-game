@@ -127,6 +127,14 @@ function createBoard() {
         keyboard: false
     });
 
+ // enable buttons once modal has been restarted //
 
+    document.getElementById("restartButton").addEventListener("click", displayButtons);
+
+    function displayButtons() {
+        $('#easyButton').attr("disabled", false);
+        $('#normalButton').attr("disabled", false);
+        $('#hardButton').attr("disabled", false);
+    }
 
 }
