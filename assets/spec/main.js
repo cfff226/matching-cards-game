@@ -36,83 +36,83 @@ function createBoard() {
     let cardList = [
         {
             name: "bear",
-            img: "assets/images/bear.png"
+            img: "images/bear.png"
         },
         {
             name: "bull",
-            img: "assets/images/bull.png"
+            img: "images/bull.png"
         },
         {
             name: "dog",
-            img: "assets/images/dog.png"
+            img: "images/dog.png"
         },
         {
             name: "duck",
-            img: "assets/images/duck.png"
+            img: "images/duck.png"
         },
         {
             name: "hare",
-            img: "assets/images/hare.png"
+            img: "images/hare.png"
         },
         {
             name: "hedgehog",
-            img: "assets/images/hedgehog.png"
+            img: "images/hedgehog.png"
         },
         {
             name: "hippo",
-            img: "assets/images/hippo.png"
+            img: "images/hippo.png"
         },
         {
             name: "koala",
-            img: "assets/images/koala.png"
+            img: "images/koala.png"
         },
         {
             name: "leopard",
-            img: "assets/images/leopard.png"
+            img: "images/leopard.png"
         },
         {
             name: "lion",
-            img: "assets/images/lion.png"
+            img: "images/lion.png"
         },
         {
             name: "monkey",
-            img: "assets/images/monkey.png"
+            img: "images/monkey.png"
         },
         {
             name: "panda",
-            img: "assets/images/panda.png"
+            img: "images/panda.png"
         },
         {
             name: "penguin",
-            img: "assets/images/penguin.png"
+            img: "images/penguin.png"
         },
         {
             name: "pig",
-            img: "assets/images/pig.png"
+            img: "images/pig.png"
         },
         {
             name: "rabbit",
-            img: "assets/images/rabbit.png"
+            img: "images/rabbit.png"
         },
         {
             name: "racoon",
-            img: "assets/images/racoon.png"
+            img: "images/racoon.png"
         },
         {
             name: "sheep",
-            img: "assets/images/sheep.png"
+            img: "images/sheep.png"
         },
         {
             name: "badger",
-            img: "assets/images/badger.png"
+            img: "images/badger.png"
         },
         {
             name: "snake",
-            img: "assets/images/snake.png"
+            img: "images/snake.png"
         },
         {
             name: "whale",
-            img: "assets/images/whale.png"
+            img: "images/whale.png"
         }
     ];
     console.log("image list created");
@@ -166,7 +166,7 @@ function createBoard() {
     function easy() {
         for (i = 0; i < easyLevelArrayPairs.length; i++) {
             var gameCard = document.createElement('img');
-            gameCard.setAttribute('src', "assets/images/background.png");
+            gameCard.setAttribute('src', "images/background.png");
             gameCard.setAttribute('data-id', easyLevelArrayPairs[i].img);
             gameCard.setAttribute('id', `cardImage${i}`);
             gameCard.addEventListener('click', flipCard);
@@ -192,8 +192,9 @@ function createBoard() {
         for (let i = 0; i < normalLevelArrayPairs.length; i++) {
 
             var gameCard = document.createElement('img');
-            gameCard.setAttribute('src', "assets/images/background.png");
+            gameCard.setAttribute('src', "images/background.png");
             gameCard.setAttribute('data-id', normalLevelArrayPairs[i].img);
+            gameCard.setAttribute('id', `cardImage${i}`);
             gameCard.addEventListener('click', flipCard);
             grid.appendChild(gameCard);
             console.log("Card id " + gameCard.getAttribute('data-id') + " added to board");
@@ -201,7 +202,23 @@ function createBoard() {
     }
 
 
+    //  hard level board //
+
+    var hardModeCardList = cardList.slice(0, 15);
+
+
+    // make hard level array pairs //
+
+
+    var hardLevelArrayPairs = hardModeCardList.concat(hardModeCardList);
+
+
+
+
+
     function checkForMatch() {
+
+        let card = document.getElementsByName("img");
 
         let cardOne = cardsChosenId[0]
         let cardTwo = cardsChosenId[1]
@@ -252,16 +269,27 @@ function createBoard() {
     }
 
     function flipBack() {
-        document.getElementById("cardImage0").setAttribute("src", "assets/images/background.png");
-        document.getElementById("cardImage1").setAttribute("src", "assets/images/background.png");
-        document.getElementById("cardImage2").setAttribute("src", "assets/images/background.png");
-        document.getElementById("cardImage3").setAttribute("src", "assets/images/background.png");
-        document.getElementById("cardImage4").setAttribute("src", "assets/images/background.png");
-        document.getElementById("cardImage5").setAttribute("src", "assets/images/background.png");
-        document.getElementById("cardImage6").setAttribute("src", "assets/images/background.png");
-        document.getElementById("cardImage7").setAttribute("src", "assets/images/background.png");
-        document.getElementById("cardImage8").setAttribute("src", "assets/images/background.png");
-        document.getElementById("cardImage9").setAttribute("src", "assets/images/background.png");
+        document.getElementById("cardImage0").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage1").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage2").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage3").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage4").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage5").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage6").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage7").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage8").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage9").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage10").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage11").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage12").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage13").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage14").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage15").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage16").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage17").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage18").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage19").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage20").setAttribute("src", "images/background.png");
     }
 
 
