@@ -117,7 +117,7 @@ function createBoard() {
     ];
     console.log("image list created");
 
-     var grid = document.querySelector('.grid');
+    var grid = document.querySelector('.grid');
     console.log("Selector Elements '.grid' found: " + grid.toString());
 
 
@@ -175,25 +175,28 @@ function createBoard() {
         }
     }
 
+    function checkForMatch() {
 
+        let card = document.getElementsByName("img");
 
+        let cardOne = cardsChosenId[0]
+        let cardTwo = cardsChosenId[1]
 
+        console.log("checkForMatch function executing");
+    }
 
+    
+    // flip the cards //
 
-
-
-
-        // flip the cards //
-
-        function flipCard() {
-            var gameCardData = this.getAttribute("data-id");
-            var gameCardId = this.getAttribute("id");
-            cardsChosen.push(gameCardData);
-            cardsChosenId.push(gameCardId);
-            this.setAttribute("src", [gameCardData]);
-            this.setAttribute("id", [gameCardId]);
-            if (cardsChosen.length === 2) {
-                setTimeout(checkForMatch, 300);
-            }
+    function flipCard() {
+        var gameCardData = this.getAttribute("data-id");
+        var gameCardId = this.getAttribute("id");
+        cardsChosen.push(gameCardData);
+        cardsChosenId.push(gameCardId);
+        this.setAttribute("src", [gameCardData]);
+        this.setAttribute("id", [gameCardId]);
+        if (cardsChosen.length === 2) {
+            setTimeout(checkForMatch, 300);
         }
     }
+}
