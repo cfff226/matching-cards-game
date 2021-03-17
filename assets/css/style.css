@@ -27,3 +27,7 @@ html {
     overflow-y: hidden;
     overflow-x: hidden;
 }
+
+.game-grid .container-fluid {
+    width: 100%;
+}
