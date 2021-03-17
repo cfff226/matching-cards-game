@@ -200,6 +200,15 @@ function createBoard() {
             alert("Match!");
             cardsWon.push(cardsChosen)
             console.log(cardsWon)
+
+            var removeCard = document.querySelectorAll(`[data-id="${cardsChosen[0]}"]`)
+
+            console.log(removeCard)
+
+            removeCard[0].classList.add('hidden')
+            removeCard[1].classList.add('hidden')
+            cardsChosen = [];
+
         }
     }
 
