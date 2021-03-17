@@ -28,4 +28,93 @@ var hardButton = document.getElementById("hardButton");
 document.addEventListener('DOMContentLoaded', createBoard());
 
 function createBoard() {
+    console.log("createBoard called");
+
+    let cardList = [
+        {
+            name: "bear",
+            img: "images/bear.png"
+        },
+        {
+            name: "bull",
+            img: "images/bull.png"
+        },
+        {
+            name: "dog",
+            img: "images/dog.png"
+        },
+         {
+            name: "duck",
+            img: "images/duck.png"
+        },
+        {
+            name: "hare",
+            img: "images/hare.png"
+        },
+        {
+            name: "hedgehog",
+            img: "images/hedgehog.png"
+        },
+        {
+            name: "hippo",
+            img: "images/hippo.png"
+        },
+        {
+            name: "koala",
+            img: "images/koala.png"
+        },
+        {
+            name: "leopard",
+            img: "images/leopard.png"
+        },
+        {
+            name: "lion",
+            img: "images/lion.png"
+        },
+        {
+            name: "monkey",
+            img: "images/monkey.png"
+        },
+        {
+            name: "panda",
+            img: "images/panda.png"
+        },
+        {
+            name: "penguin",
+            img: "images/penguin.png"
+        },
+        {
+            name: "pig",
+            img: "images/pig.png"
+        },
+        {
+            name: "rabbit",
+            img: "images/rabbit.png"
+        },
+        {
+            name: "racoon",
+            img: "images/racoon.png"
+        },
+        {
+            name: "sheep",
+            img: "images/sheep.png"
+        },
+        {
+            name: "badger",
+            img: "images/badger.png"
+        },
+        {
+            name: "snake",
+            img: "images/snake.png"
+        },
+        {
+            name: "whale",
+            img: "images/whale.png"
+        }
+    ];
+
+
+
+
+
 }
