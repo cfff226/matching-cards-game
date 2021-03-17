@@ -1,6 +1,6 @@
 console.log("javascript's working");
 
-        // variables for the game cards // 
+// variables for the game cards // 
 
 var cardsChosen = [];
 var cardsChosenId = [];
@@ -14,11 +14,11 @@ var easyModeCardList;
 var easyLevelArrayPairs;
 var displayButtons;
 
-        // variables for the game information //
+// variables for the game information //
 
 var result = document.querySelector('result');
 
-        // variables for each level //
+// variables for each level //
 
 var restartButton = document.getElementById("restartButton");
 var easyButton = document.getElementById("easyButton");
@@ -26,7 +26,7 @@ var normalButton = document.getElementById("normalButton");
 var hardButton = document.getElementById("hardButton");
 
 
-         // array and function to create the game board //
+// array and function to create the game board //
 
 document.addEventListener('DOMContentLoaded', createBoard());
 
@@ -121,26 +121,26 @@ function createBoard() {
     console.log("Selector Elements '.grid' found: " + grid.toString());
 
 
-        // shuffle function //
+    // shuffle function //
 
     function shuffle(array) {
         array.sort(() => Math.random() - 0.5);
     }
 
-        // modal //
+    // modal //
 
     $(window).on('load', function () {
         $('.modal').modal('show');
     });
 
-        // disable clicking outside of modal //
+    // disable clicking outside of modal //
 
     $('.modal').modal({
         backdrop: 'static',
         keyboard: false
     });
 
-        // enable buttons once modal has been restarted //
+    // enable buttons once modal has been restarted //
 
     document.getElementById("restartButton").addEventListener("click", displayButtons);
 
@@ -150,7 +150,7 @@ function createBoard() {
         $('#hardButton').attr("disabled", false);
     }
 
-         // easy level board //
+    // easy level board //
 
     var easyModeCardList = cardList.slice(0, 5);
 
@@ -159,7 +159,7 @@ function createBoard() {
     shuffle(easyLevelArrayPairs);
 
 
-        // if easy mode button is clicked //
+    // if easy mode button is clicked //
 
     easyButton.addEventListener('click', easy);
 
@@ -195,7 +195,7 @@ function createBoard() {
             console.log(cardsChosen[0])
             console.log(cardsChosen[1])
 
-        // there's a match //
+            // there's a match //
 
             alert("Match!");
             cardsWon.push(cardsChosen)
@@ -212,7 +212,9 @@ function createBoard() {
 
         else {
 
-         // no match, try again //
+            noMatch()
+
+            // no match, try again //
 
             alert("Try again");
             cardsChosen = [];
@@ -221,14 +223,29 @@ function createBoard() {
         cardsChosenId = [];
     }
 
-   function noMatch() {
+
+
+    function noMatch() {
         setTimeout(flipBack, 7);
+    }
+
+    function flipBack() {
+        document.getElementById("cardImage0").setAttribute("src", "assets/images/background.png");
+        document.getElementById("cardImage1").setAttribute("src", "assets/images/background.png");
+        document.getElementById("cardImage2").setAttribute("src", "assets/images/background.png");
+        document.getElementById("cardImage3").setAttribute("src", "assets/images/background.png");
+        document.getElementById("cardImage4").setAttribute("src", "assets/images/background.png");
+        document.getElementById("cardImage5").setAttribute("src", "assets/images/background.png");
+        document.getElementById("cardImage6").setAttribute("src", "assets/images/background.png");
+        document.getElementById("cardImage7").setAttribute("src", "assets/images/background.png");
+        document.getElementById("cardImage8").setAttribute("src", "assets/images/background.png");
+        document.getElementById("cardImage9").setAttribute("src", "assets/images/background.png");
     }
 
 
 
 
-         // flip the cards //
+// flip the cards //
 
 function flipCard() {
     var gameCardData = this.getAttribute("data-id");
