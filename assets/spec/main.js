@@ -116,6 +116,12 @@ function createBoard() {
     ];
     console.log("image list created");
 
+    var grid = document.querySelector('.grid');
+    console.log("Selector Elements '.grid' found: " + grid.toString());
+
+
+
+
 
     // shuffle function //
 
