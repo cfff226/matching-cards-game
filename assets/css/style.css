@@ -5,3 +5,12 @@
     margin-top: 0;
     box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+    border: 4rem solid #B084CC;
+    background: #5DD9C1;
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
+    display: flex;
+}
