@@ -120,5 +120,13 @@ function createBoard() {
         $('.modal').modal('show');
     });
 
+ // disable clicking outside of modal //
+
+    $('.modal').modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+
+
 
 }
