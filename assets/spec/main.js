@@ -232,7 +232,6 @@ function createBoard() {
         }
     }
 
-
     function checkForMatch() {
 
         let card = document.getElementsByName("img");
@@ -307,8 +306,16 @@ function createBoard() {
         document.getElementById("cardImage18").setAttribute("src", "images/background.png");
         document.getElementById("cardImage19").setAttribute("src", "images/background.png");
         document.getElementById("cardImage20").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage21").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage22").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage23").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage24").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage25").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage26").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage27").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage28").setAttribute("src", "images/background.png");
+        document.getElementById("cardImage29").setAttribute("src", "images/background.png");
     }
-
 
     // flip the cards //
 
