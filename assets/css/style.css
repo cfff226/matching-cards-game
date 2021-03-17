@@ -34,7 +34,7 @@ html {
 
 .grid {
     margin-left: 2.5rem;
-    margin-top: 2rem;
+    justify-content: center;
 }
 
 .modal {
@@ -89,7 +89,7 @@ html {
 
 h1 {
     justify-items: center;
-    font-size: 4rem;
+    font-size: 2.5rem;
     padding-top: 2rem;
     margin-left: 2.5rem;
     margin-right: 4rem;
@@ -115,18 +115,15 @@ p {
     margin: 0.5rem;
     box-shadow: 0.7rem 0.7rem 0.7rem rgba(68, 68, 68, 0.6);
     border: solid white 0.24rem;
+    justify-content: center;
 }
 
 .hidden {
     display: none;
 }
 
-.front-card
-.back-card {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  position: absolute;
-  transform-style: preserve-3d;
-  transition-duration: 2s;
-}
+@media (min-width: 300px) and (max-width: 800px) { 
+.grid img {
+    height: 3.125rem;
+    width: 2.5rem;
+}}
