@@ -31,3 +31,8 @@ html {
 .game-grid .container-fluid {
     width: 100%;
 }
+
+.grid {
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+}
