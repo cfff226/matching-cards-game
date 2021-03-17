@@ -8,6 +8,7 @@ var cardsWon = [];
 var numberOfCards;
 var movesCount;
 var gameCard;
+var gameCardData;
 var gameCardId;
 var easyModeCardList;
 var easyLevelArrayPairs;
@@ -116,6 +117,9 @@ function createBoard() {
     ];
     console.log("image list created");
 
+     var grid = document.querySelector('.grid');
+    console.log("Selector Elements '.grid' found: " + grid.toString());
+
 
     // shuffle function //
 
@@ -171,16 +175,25 @@ function createBoard() {
         }
     }
 
-    // flip the cards //
 
-    function flipCard() {
-        var gameCardData = this.getAttribute("data-id");
-        var gameCardId = this.getAttribute("id");
-        cardsChosen.push(gameCardData);
-        cardsChosenId.push(gameCardId);
-        this.setAttribute("src", [gameCardData]);
-        this.setAttribute("id", [gameCardId]);
-        if (cardsChosen.length === 2) {
-            setTimeout(checkForMatch, 300);
-        }}
-}
+
+
+
+
+
+
+
+        // flip the cards //
+
+        function flipCard() {
+            var gameCardData = this.getAttribute("data-id");
+            var gameCardId = this.getAttribute("id");
+            cardsChosen.push(gameCardData);
+            cardsChosenId.push(gameCardId);
+            this.setAttribute("src", [gameCardData]);
+            this.setAttribute("id", [gameCardId]);
+            if (cardsChosen.length === 2) {
+                setTimeout(checkForMatch, 300);
+            }
+        }
+    }
