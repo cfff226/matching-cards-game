@@ -175,9 +175,19 @@ function createBoard() {
         }
     }
 
-    function checkForMatch() {
 
-        let card = document.getElementsByName("img");
+    //  normal level board //
+
+    var normalModeCardList = cardList.slice(0, 10);
+
+    // make normal level pairs //
+
+    var normalLevelArrayPairs = normalModeCardList.concat(normalModeCardList);
+
+
+
+
+    function checkForMatch() {
 
         let cardOne = cardsChosenId[0]
         let cardTwo = cardsChosenId[1]
@@ -223,8 +233,6 @@ function createBoard() {
         cardsChosenId = [];
     }
 
-
-
     function noMatch() {
         setTimeout(flipBack, 7);
     }
@@ -243,18 +251,17 @@ function createBoard() {
     }
 
 
+    // flip the cards //
 
-
-// flip the cards //
-
-function flipCard() {
-    var gameCardData = this.getAttribute("data-id");
-    var gameCardId = this.getAttribute("id");
-    cardsChosen.push(gameCardData);
-    cardsChosenId.push(gameCardId);
-    this.setAttribute("src", [gameCardData]);
-    this.setAttribute("id", [gameCardId]);
-    if (cardsChosen.length === 2) {
-        setTimeout(checkForMatch, 300);
+    function flipCard() {
+        var gameCardData = this.getAttribute("data-id");
+        var gameCardId = this.getAttribute("id");
+        cardsChosen.push(gameCardData);
+        cardsChosenId.push(gameCardId);
+        this.setAttribute("src", [gameCardData]);
+        this.setAttribute("id", [gameCardId]);
+        if (cardsChosen.length === 2) {
+            setTimeout(checkForMatch, 300);
+        }
     }
-}}
+}
