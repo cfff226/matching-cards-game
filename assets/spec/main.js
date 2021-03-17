@@ -183,20 +183,39 @@ function createBoard() {
         let cardTwo = cardsChosenId[1]
 
         console.log("checkForMatch function executing");
-    }
 
-    
-    // flip the cards //
+        var cardsMatch = cardsChosen[0] === cardsChosen[1]
 
-    function flipCard() {
-        var gameCardData = this.getAttribute("data-id");
-        var gameCardId = this.getAttribute("id");
-        cardsChosen.push(gameCardData);
-        cardsChosenId.push(gameCardId);
-        this.setAttribute("src", [gameCardData]);
-        this.setAttribute("id", [gameCardId]);
-        if (cardsChosen.length === 2) {
-            setTimeout(checkForMatch, 300);
+        console.log(cardsMatch)
+
+        // if there's a match //
+
+        if (cardsMatch) {
+
+            console.log(cardsChosen[0])
+            console.log(cardsChosen[1])
+
+            // there's a match //
+
+            alert("Match!");
+            cardsWon.push(cardsChosen)
+            console.log(cardsWon)
+
+
+
+        }
+
+        // flip the cards //
+
+        function flipCard() {
+            var gameCardData = this.getAttribute("data-id");
+            var gameCardId = this.getAttribute("id");
+            cardsChosen.push(gameCardData);
+            cardsChosenId.push(gameCardId);
+            this.setAttribute("src", [gameCardData]);
+            this.setAttribute("id", [gameCardId]);
+            if (cardsChosen.length === 2) {
+                setTimeout(checkForMatch, 300);
+            }
         }
     }
-}
