@@ -13,6 +13,7 @@ var gameCardId;
 var easyModeCardList;
 var easyLevelArrayPairs;
 var displayButtons;
+var removeCard;
 
 // variables for the game information //
 
@@ -140,6 +141,14 @@ function createBoard() {
         keyboard: false
     });
 
+ // restart game to bring modal back up  //
+
+    $(document).ready(function () {
+        $("#restartButton").click(function () {
+            $(".modal").modal('show');
+        });
+    });
+
     // enable buttons once modal has been restarted //
 
     document.getElementById("restartButton").addEventListener("click", displayButtons);
@@ -239,6 +248,7 @@ function createBoard() {
         let cardOne = cardsChosenId[0]
         let cardTwo = cardsChosenId[1]
 
+
         console.log("checkForMatch function executing");
 
         var cardsMatch = cardsChosen[0] === cardsChosen[1]
@@ -279,6 +289,13 @@ function createBoard() {
 
         cardsChosenId = [];
     }
+   
+// moves score //
+
+//card.addEventListener('click', );
+
+
+
 
     function noMatch() {
         setTimeout(flipBack, 400);
@@ -326,7 +343,7 @@ function createBoard() {
         cardsChosenId.push(gameCardId);
         this.setAttribute("src", [gameCardData]);
         this.setAttribute("id", [gameCardId]);
-        if (cardsChosen.length === 2) {
+        if (cardsChosen.length === 2 && cardsChosen[0] !== cardsChosen[0]) {
             setTimeout(checkForMatch, 300);
         }
     }
