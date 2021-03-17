@@ -188,6 +188,17 @@ function createBoard() {
 
     normalButton.addEventListener('click', normal);
 
+    function normal() {
+        for (let i = 0; i < normalLevelArrayPairs.length; i++) {
+
+            var gameCard = document.createElement('img');
+            gameCard.setAttribute('src', "assets/images/background.png");
+            gameCard.setAttribute('data-id', normalLevelArrayPairs[i].img);
+            gameCard.addEventListener('click', flipCard);
+            grid.appendChild(gameCard);
+            console.log("Card id " + gameCard.getAttribute('data-id') + " added to board");
+        }
+    }
 
 
     function checkForMatch() {
