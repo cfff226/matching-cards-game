@@ -45,7 +45,7 @@ function createBoard() {
             name: "dog",
             img: "images/dog.png"
         },
-         {
+        {
             name: "duck",
             img: "images/duck.png"
         },
@@ -114,29 +114,29 @@ function createBoard() {
             img: "images/whale.png"
         }
     ];
-   console.log("image list created");
+    console.log("image list created");
 
 
-  // shuffle function //
+    // shuffle function //
 
     function shuffle(array) {
         array.sort(() => Math.random() - 0.5);
     }
 
-  // modal //
+    // modal //
 
     $(window).on('load', function () {
         $('.modal').modal('show');
     });
 
- // disable clicking outside of modal //
+    // disable clicking outside of modal //
 
     $('.modal').modal({
         backdrop: 'static',
         keyboard: false
     });
 
- // enable buttons once modal has been restarted //
+    // enable buttons once modal has been restarted //
 
     document.getElementById("restartButton").addEventListener("click", displayButtons);
 
@@ -146,15 +146,18 @@ function createBoard() {
         $('#hardButton').attr("disabled", false);
     }
 
-// easy level board //
+    // easy level board //
 
-var easyModeCardList = cardList.slice(0, 5);
+    var easyModeCardList = cardList.slice(0, 5);
 
-var easyLevelArrayPairs = easyModeCardList.concat(easyModeCardList);
+    var easyLevelArrayPairs = easyModeCardList.concat(easyModeCardList);
+
+    shuffle(easyLevelArrayPairs);
 
 
+    // if easy mode button is clicked //
 
-
+    easyButton.addEventListener('click', easy);
 
 
 
