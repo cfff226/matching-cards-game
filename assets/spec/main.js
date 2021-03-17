@@ -219,6 +219,19 @@ function createBoard() {
 
     hardButton.addEventListener('click', hard);
 
+    function hard() {
+        for (let i = 0; i < hardLevelArrayPairs.length; i++) {
+
+            var gameCard = document.createElement('img');
+            gameCard.setAttribute('src', "images/background.png");
+            gameCard.setAttribute('data-id', hardLevelArrayPairs[i].img);
+            gameCard.setAttribute('id', `cardImage${i}`);
+            gameCard.addEventListener('click', flipCard);
+            grid.appendChild(gameCard);
+            console.log("Card id " + gameCard.getAttribute('data-id') + " added to board");
+        }
+    }
+
 
     function checkForMatch() {
 
