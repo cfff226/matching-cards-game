@@ -174,8 +174,6 @@ function createBoard() {
             console.log("Card id " + gameCard.getAttribute('data-id') + " added to board");
         }
     }
-
-
     //  normal level board //
 
     var normalModeCardList = cardList.slice(0, 10);
@@ -184,6 +182,11 @@ function createBoard() {
 
     var normalLevelArrayPairs = normalModeCardList.concat(normalModeCardList);
 
+    shuffle(normalLevelArrayPairs);
+
+    // if normal mode button is clicked //
+
+    normalButton.addEventListener('click', normal);
 
 
 
