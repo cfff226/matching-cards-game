@@ -156,11 +156,11 @@ function createBoard() {
     // restart game button to remove all cards on click //
 
     document.getElementById("restartButton").addEventListener("click", removeDeck);
-
     function removeDeck() {
-    
-    }
+        document.getElementById("game-grid container-fluid").innerHTML = "";
 
+
+    }
 
     // enable buttons once modal has been restarted //
 
@@ -177,9 +177,6 @@ function createBoard() {
     var easyModeCardList = cardList.slice(0, 5);
 
     var easyLevelArrayPairs = easyModeCardList.concat(easyModeCardList);
-
-
-    var cardsForAllLevels = easyLevelArrayPairs;
 
     shuffle(easyLevelArrayPairs);
 
@@ -207,7 +204,6 @@ function createBoard() {
 
     var normalLevelArrayPairs = normalModeCardList.concat(normalModeCardList);
 
-
     shuffle(normalLevelArrayPairs);
 
     // if normal mode button is clicked //
@@ -227,7 +223,6 @@ function createBoard() {
         }
     }
 
-
     //  hard level board //
 
     var hardModeCardList = cardList.slice(0, 15);
@@ -238,10 +233,11 @@ function createBoard() {
 
     var hardLevelArrayPairs = hardModeCardList.concat(hardModeCardList);
 
+    var cardsForAllLevels = hardLevelArrayPairs;
+
     shuffle(hardLevelArrayPairs);
 
     // event listener for hard button //
-
 
     hardButton.addEventListener('click', hard);
 
@@ -257,15 +253,12 @@ function createBoard() {
             console.log("Card id " + gameCard.getAttribute('data-id') + " added to board");
         }
     }
- 
+
 
     function checkForMatch() {
 
-        //let card = document.getElementsByName("img");
-
         let cardOne = cardsChosenId[0]
         let cardTwo = cardsChosenId[1]
-
 
         console.log("checkForMatch function executing");
 
@@ -301,25 +294,20 @@ function createBoard() {
 
             // no match, try again //
 
-            //alert("Try again");
             cardsChosen = [];
         }
 
+        // alert to appear when all pairs are found //
 
-console.log(cardsForAllLevels)
- if (cardsWon.length === cardsForAllLevels.length/2) {
-        alert ("you've won")
-        document.getElementById("result").innerHTML="You've matched all of the pairs"
-    }
+        if ($('.grid').children(':visible').length == 0) {
 
+            // action when all are hidden
+            alert("you've won")
+            document.getElementById("result").innerHTML = "You've matched all of the pairs"
+        }
 
         cardsChosenId = [];
     }
-
-
-
-
-
 
 
     function noMatch() {
@@ -370,10 +358,10 @@ console.log(cardsForAllLevels)
         this.setAttribute("id", [gameCardId]);
 
         //if (cardsChosenId[0] === cardsChosenId[1]) {
-            //flipBack()
-           // cardsChosen = [];
-        
-       if (cardsChosen.length === 2) {
+        //flipBack()
+        // cardsChosen = [];
+
+        if (cardsChosen.length === 2) {
             setTimeout(checkForMatch, 300);
         }
     }
