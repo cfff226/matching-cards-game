@@ -17,6 +17,7 @@ var removeCard;
 var grid = document.getElementsByClassName("grid");
 var gridRow = document.getElementsByClassName("row");
 var gridColumn = document.getElementsByClassName("col-sm-12");
+var cardsForAllLevels = []
 
 // variables for the game information //
 
@@ -152,7 +153,14 @@ function createBoard() {
         });
     });
 
-  
+    // restart game button to remove all cards on click //
+
+    document.getElementById("restartButton").addEventListener("click", removeDeck);
+
+    function removeDeck() {
+    
+    }
+
 
     // enable buttons once modal has been restarted //
 
@@ -169,6 +177,9 @@ function createBoard() {
     var easyModeCardList = cardList.slice(0, 5);
 
     var easyLevelArrayPairs = easyModeCardList.concat(easyModeCardList);
+
+
+    var cardsForAllLevels = easyLevelArrayPairs;
 
     shuffle(easyLevelArrayPairs);
 
@@ -195,6 +206,7 @@ function createBoard() {
     // make normal level pairs //
 
     var normalLevelArrayPairs = normalModeCardList.concat(normalModeCardList);
+
 
     shuffle(normalLevelArrayPairs);
 
@@ -245,10 +257,11 @@ function createBoard() {
             console.log("Card id " + gameCard.getAttribute('data-id') + " added to board");
         }
     }
+ 
 
     function checkForMatch() {
 
-        let card = document.getElementsByName("img");
+        //let card = document.getElementsByName("img");
 
         let cardOne = cardsChosenId[0]
         let cardTwo = cardsChosenId[1]
@@ -288,12 +301,26 @@ function createBoard() {
 
             // no match, try again //
 
-            alert("Try again");
+            //alert("Try again");
             cardsChosen = [];
         }
 
+
+console.log(cardsForAllLevels)
+ if (cardsWon.length === cardsForAllLevels.length/2) {
+        alert ("you've won")
+        document.getElementById("result").innerHTML="You've matched all of the pairs"
+    }
+
+
         cardsChosenId = [];
     }
+
+
+
+
+
+
 
     function noMatch() {
         setTimeout(flipBack, 400);
@@ -341,7 +368,12 @@ function createBoard() {
         cardsChosenId.push(gameCardId);
         this.setAttribute("src", [gameCardData]);
         this.setAttribute("id", [gameCardId]);
-        if (cardsChosen.length === 2 && cardsChosen[0] !== cardsChosen[0]) {
+
+        //if (cardsChosenId[0] === cardsChosenId[1]) {
+            //flipBack()
+           // cardsChosen = [];
+        
+       if (cardsChosen.length === 2) {
             setTimeout(checkForMatch, 300);
         }
     }
