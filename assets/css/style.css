@@ -40,6 +40,14 @@ body {
    border: unset;
 }}
 
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+    overflow-y: scroll;
+    justify-content: center;
+  }
+}
+
 #section-1 {
     width: 100vw;
 }
@@ -125,6 +133,16 @@ body {
 .game-information {
     margin-left: unset;
 }}
+
+@media (orientation: landscape) {
+  .game-information {
+      margin: unset;
+      padding-left: 70px;
+  }}
+
+
+
+
 
 h1 {
     justify-items: center;
