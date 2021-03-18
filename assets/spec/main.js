@@ -14,6 +14,9 @@ var easyModeCardList;
 var easyLevelArrayPairs;
 var displayButtons;
 var removeCard;
+var grid = document.getElementsByClassName("grid");
+var gridRow = document.getElementsByClassName("row");
+var gridColumn = document.getElementsByClassName("col-sm-12");
 
 // variables for the game information //
 
@@ -141,13 +144,15 @@ function createBoard() {
         keyboard: false
     });
 
- // restart game to bring modal back up  //
+    // restart game to bring modal back up  //
 
     $(document).ready(function () {
         $("#restartButton").click(function () {
             $(".modal").modal('show');
         });
     });
+
+  
 
     // enable buttons once modal has been restarted //
 
@@ -289,13 +294,6 @@ function createBoard() {
 
         cardsChosenId = [];
     }
-   
-// moves score //
-
-//card.addEventListener('click', );
-
-
-
 
     function noMatch() {
         setTimeout(flipBack, 400);
