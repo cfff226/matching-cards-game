@@ -17,7 +17,10 @@ var removeCard;
 var grid = document.getElementsByClassName("grid");
 var gridRow = document.getElementsByClassName("row");
 var gridColumn = document.getElementsByClassName("col-sm-12");
+<<<<<<< HEAD
 var cardsForAllLevels = []
+=======
+>>>>>>> 0289df262df7ddecbeab5f83a08236c7e5f72b42
 
 // variables for the game information //
 
@@ -153,6 +156,7 @@ function createBoard() {
         });
     });
 
+<<<<<<< HEAD
     // restart game button to remove all cards on click //
 
     document.getElementById("restartButton").addEventListener("click", removeDeck);
@@ -161,6 +165,9 @@ function createBoard() {
 
 
     }
+=======
+  
+>>>>>>> 0289df262df7ddecbeab5f83a08236c7e5f72b42
 
     // enable buttons once modal has been restarted //
 
@@ -297,6 +304,7 @@ function createBoard() {
             cardsChosen = [];
         }
 
+<<<<<<< HEAD
         // alert to appear when all pairs are found //
 
         if ($('.grid').children(':visible').length == 0) {
@@ -309,6 +317,10 @@ function createBoard() {
         cardsChosenId = [];
     }
 
+=======
+        cardsChosenId = [];
+    }
+>>>>>>> 0289df262df7ddecbeab5f83a08236c7e5f72b42
 
     function noMatch() {
         setTimeout(flipBack, 400);
