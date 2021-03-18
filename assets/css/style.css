@@ -106,6 +106,18 @@ h1 {
     text-align: center;
 }
 
+h3 {
+    background-color:  #B084CC;
+    border: solid 0.1rem  rgb(255, 255, 23);
+    color:  rgb(255, 255, 23);
+    justify-items: center;
+    font-size: 1.5rem;
+    padding: 2px;
+    letter-spacing: 0.25rem;
+    flex: nowrap;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgba(68, 68, 68, 0.6);
+ }
+
 p {
     color: rgb(255, 255, 23);
     text-shadow: 0.1rem 0.1rem 0.1rem rgba(68, 68, 68, 0.6);
