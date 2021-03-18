@@ -70,24 +70,26 @@ html {
 }
 
  .btn-primary  {
-     background-color:  #B084CC;
-     border: solid 0.1rem  rgb(255, 255, 23);
+     background-color: unset;
+     border: unset;
      color:  rgb(255, 255, 23);
  }
 
  .btn-primary:hover {
-    background-color:  #B084CC;
-    border: solid 0.1rem  rgb(255, 255, 23);
+     background-color: unset;
+     color:  #B084CC;
+     border: unset;
  }
 
  .btn-primary:active {
-    background-color:  #B084CC;
-    border: solid 0.1rem  rgb(255, 255, 23);
+     background-color: unset;
+     border: unset;
  }
 
  .btn-primary:focus {
-    background-color:  #B084CC;
-    border: solid 0.1rem  rgb(255, 255, 23);
+    background-color:  unset;
+    border: unset;
+   
  }
 
 .game-information {
