@@ -52,7 +52,7 @@ body {
     width: 100vw;
 }
 
-.game-grid .container-fluid {
+#game-grid-container-fluid {
     width: 100%;
     justify-content: center;
 }
@@ -111,7 +111,7 @@ body {
 
  .btn-primary:hover {
      background-color: unset;
-      color:#B084CC;
+      color:#5DD9C1;
  }
 
  .btn-primary:active {
@@ -121,6 +121,14 @@ body {
  .btn-primary:focus {
     background-color:  unset;
    
+ }
+
+ #restartButton {
+     color:#B084CC;
+ }
+
+  #restartButton:hover {
+     color:  rgb(255, 255, 23);
  }
 
 .game-information {
@@ -136,9 +144,9 @@ body {
 }}
 
 @media (orientation: landscape) {
-  .game-information {
-      margin: unset;
-      padding-left: 100px;
+  #game-grid-container-fluid {
+      width: 60vw;
+      padding-left: 4rem;
   }}
 
 @media (orientation: portrait) {
