@@ -137,12 +137,14 @@ body {
 @media (orientation: landscape) {
   .game-information {
       margin: unset;
-      padding-left: 70px;
+      padding-left: 100px;
   }}
 
-
-
-
+@media (orientation: portrait) {
+  .game-information {
+      margin: unset;
+      padding-left: 100px;
+  }}
 
 h1 {
     justify-items: center;
