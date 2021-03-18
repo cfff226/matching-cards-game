@@ -79,8 +79,17 @@ html {
      color:  rgb(255, 255, 23);
  }
 
+@media screen and (max-width:768px){
+    .btn-primary  {
+    font-size: 10px;
+    margin: unset;
+    padding: 0.15rem;
+    }
+}
+
  .btn-primary:hover {
      background-color: unset;
+      color:#B084CC;
  }
 
  .btn-primary:active {
