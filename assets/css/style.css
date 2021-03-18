@@ -94,7 +94,13 @@ html {
     justify-content: center;
     text-align: center;
     display: inline-block;
+    margin-left: 22rem;
 }
+
+@media (min-width: 300px) and (max-width: 800px) { 
+.game-information {
+    margin-left: unset;
+}}
 
 h1 {
     justify-items: center;
@@ -108,7 +114,6 @@ h1 {
 }
 
 h3 {
-
     color:  rgb(255, 255, 23);
     justify-items: center;
     font-size: 1.5rem;
