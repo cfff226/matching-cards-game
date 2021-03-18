@@ -69,7 +69,7 @@ html {
  .btn-primary  {
      background-color:  #B084CC;
      border: solid 0.1rem  rgb(255, 255, 23);
-     display: inline-block;
+     color:  rgb(255, 255, 23);
  }
 
  .btn-primary:hover {
