@@ -69,6 +69,10 @@ html {
     font-size: 20px;
 }
 
+.modal-footer {
+    flex-wrap: nowrap;
+}
+
  .btn-primary  {
      background-color: unset;
      border: unset;
@@ -77,18 +81,14 @@ html {
 
  .btn-primary:hover {
      background-color: unset;
-     color:  #B084CC;
-     border: unset;
  }
 
  .btn-primary:active {
      background-color: unset;
-     border: unset;
  }
 
  .btn-primary:focus {
     background-color:  unset;
-    border: unset;
    
  }
 
