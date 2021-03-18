@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@200&family=Press+Start+2P&display=swap');
 
 * {
-    padding: 0;
+    padding: 5px, 5px, 5px, 5px;
     margin-top: 0;
     box-sizing: border-box;
 }
@@ -59,6 +59,7 @@ body {
 
 .grid {
     margin-left: 2.5rem;
+    margin-top: 60px;
     justify-content: center;
 }
 
