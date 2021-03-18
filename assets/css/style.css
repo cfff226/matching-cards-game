@@ -28,6 +28,10 @@ html {
     overflow-x: hidden;
 }
 
+#section-1 {
+    width: 100vw;
+}
+
 .game-grid .container-fluid {
     width: 100%;
 }
@@ -43,7 +47,6 @@ html {
      margin-left: 0;
    }
 }
-
 
 .modal {
     margin-left: 0; 
@@ -90,8 +93,6 @@ html {
 .game-information {
     justify-content: center;
     text-align: center;
-    padding-top: 2rem;
-    padding-left: 5rem;
     display: inline-block;
 }
 
