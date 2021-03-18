@@ -17,10 +17,7 @@ var removeCard;
 var grid = document.getElementsByClassName("grid");
 var gridRow = document.getElementsByClassName("row");
 var gridColumn = document.getElementsByClassName("col-sm-12");
-<<<<<<< HEAD
 var cardsForAllLevels = []
-=======
->>>>>>> 0289df262df7ddecbeab5f83a08236c7e5f72b42
 
 // variables for the game information //
 
@@ -148,6 +145,14 @@ function createBoard() {
         keyboard: false
     });
 
+    // close modal when level is picked //
+
+
+    $('#easyButton').attr("data-dismiss", "modal");
+    $('#normalButton').attr("data-dismiss", "modal");
+    $('hardButton').attr("data-dismiss", "modal");
+
+
     // restart game to bring modal back up  //
 
     $(document).ready(function () {
@@ -156,18 +161,16 @@ function createBoard() {
         });
     });
 
-<<<<<<< HEAD
     // restart game button to remove all cards on click //
 
     document.getElementById("restartButton").addEventListener("click", removeDeck);
     function removeDeck() {
-        document.getElementById("game-grid container-fluid").innerHTML = "";
+        document.getElementById("game-grid container-fluid").innerHTML = ""
 
+        document.getElementById("game-grid container-fluid").innerHTML = `<div class="grid"></div>`
 
     }
-=======
-  
->>>>>>> 0289df262df7ddecbeab5f83a08236c7e5f72b42
+
 
     // enable buttons once modal has been restarted //
 
@@ -262,119 +265,125 @@ function createBoard() {
     }
 
 
+    // count how many moves //
+
+    var movesCount = 0;
+
     function checkForMatch() {
 
-        let cardOne = cardsChosenId[0]
-        let cardTwo = cardsChosenId[1]
+        movesCount++;
+        console.log("I have been called " + movesCount + " times");
+        document.getElementById("result").innerHTML=movesCount
+    
 
-        console.log("checkForMatch function executing");
+    let cardOne = cardsChosenId[0]
+    let cardTwo = cardsChosenId[1]
 
-        var cardsMatch = cardsChosen[0] === cardsChosen[1]
+    console.log("checkForMatch function executing");
 
-        console.log(cardsMatch)
+    var cardsMatch = cardsChosen[0] === cardsChosen[1]
 
-        // if there's a match //
+    console.log(cardsMatch)
 
-        if (cardsMatch) {
+    // if there's a match //
 
-            console.log(cardsChosen[0])
-            console.log(cardsChosen[1])
+    if (cardsMatch) {
 
-            // there's a match //
+        console.log(cardsChosen[0])
+        console.log(cardsChosen[1])
 
-            alert("Match!");
-            cardsWon.push(cardsChosen)
-            console.log(cardsWon)
+        // there's a match //
 
-            var removeCard = document.querySelectorAll(`[data-id="${cardsChosen[0]}"]`)
+        alert("Match!");
+        cardsWon.push(cardsChosen)
+        console.log(cardsWon)
 
-            console.log(removeCard)
+        var removeCard = document.querySelectorAll(`[data-id="${cardsChosen[0]}"]`)
 
-            removeCard[0].classList.add('hidden')
-            removeCard[1].classList.add('hidden')
-            cardsChosen = [];
-        }
+        console.log(removeCard)
 
-        else {
-
-            noMatch()
-
-            // no match, try again //
-
-            cardsChosen = [];
-        }
-
-<<<<<<< HEAD
-        // alert to appear when all pairs are found //
-
-        if ($('.grid').children(':visible').length == 0) {
-
-            // action when all are hidden
-            alert("you've won")
-            document.getElementById("result").innerHTML = "You've matched all of the pairs"
-        }
-
-        cardsChosenId = [];
+        removeCard[0].classList.add('hidden')
+        removeCard[1].classList.add('hidden')
+        cardsChosen = [];
     }
 
-=======
-        cardsChosenId = [];
-    }
->>>>>>> 0289df262df7ddecbeab5f83a08236c7e5f72b42
+    else {
 
-    function noMatch() {
-        setTimeout(flipBack, 400);
-    }
+        noMatch()
 
-    function flipBack() {
-        document.getElementById("cardImage0").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage1").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage2").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage3").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage4").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage5").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage6").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage7").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage8").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage9").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage10").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage11").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage12").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage13").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage14").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage15").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage16").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage17").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage18").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage19").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage20").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage21").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage22").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage23").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage24").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage25").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage26").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage27").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage28").setAttribute("src", "images/background.png");
-        document.getElementById("cardImage29").setAttribute("src", "images/background.png");
+        // no match, try again //
+
+        cardsChosen = [];
     }
 
-    // flip the cards //
+    // alert to appear when all pairs are found //
 
-    function flipCard() {
-        var gameCardData = this.getAttribute("data-id");
-        var gameCardId = this.getAttribute("id");
-        cardsChosen.push(gameCardData);
-        cardsChosenId.push(gameCardId);
-        this.setAttribute("src", [gameCardData]);
-        this.setAttribute("id", [gameCardId]);
+    if ($('.grid').children(':visible').length == 0) {
 
-        //if (cardsChosenId[0] === cardsChosenId[1]) {
-        //flipBack()
-        // cardsChosen = [];
+        // action when all are hidden //
 
-        if (cardsChosen.length === 2) {
-            setTimeout(checkForMatch, 300);
-        }
+        alert("you've won")
+        document.getElementById("result").innerHTML = "You've matched all of the pairs"
+
     }
+
+    cardsChosenId = [];
 }
+
+
+function noMatch() {
+    setTimeout(flipBack, 400);
+}
+
+function flipBack() {
+    document.getElementById("cardImage0").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage1").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage2").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage3").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage4").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage5").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage6").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage7").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage8").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage9").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage10").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage11").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage12").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage13").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage14").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage15").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage16").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage17").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage18").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage19").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage20").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage21").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage22").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage23").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage24").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage25").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage26").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage27").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage28").setAttribute("src", "images/background.png");
+    document.getElementById("cardImage29").setAttribute("src", "images/background.png");
+}
+
+// flip the cards //
+
+function flipCard() {
+    var gameCardData = this.getAttribute("data-id");
+    var gameCardId = this.getAttribute("id");
+    cardsChosen.push(gameCardData);
+    cardsChosenId.push(gameCardId);
+    this.setAttribute("src", [gameCardData]);
+    this.setAttribute("id", [gameCardId]);
+
+    //if (cardsChosenId[0] === cardsChosenId[1]) {
+
+    //cardsChosen = [];
+    //flipBack()
+
+    if (cardsChosen.length === 2) {
+        setTimeout(checkForMatch, 300);
+    }
+}}
